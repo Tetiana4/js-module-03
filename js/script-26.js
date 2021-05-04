@@ -1,22 +1,14 @@
-// Мы получили прогноз погоды на два дня, с минимальными и максимальными температурами,
-// а также необязательными иконками.
-// Замени объявления всех переменных одной операцией деструктуризации свойств объекта forecast.
-// Задай значение по умолчанию для иконок, переменных todayIcon и tomorrowIcon - строку 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg'.
+// Функция calculateMeanTemperature(forecast)
+// принимает один параметр forecast -
+// объект температур на два дня следующего формата.
 
-const forecast = {
-  today: {
-    low: 28,
-    high: 32,
-    icon: 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
-  },
-  tomorrow: {
-    low: 27,
-    high: 31,
-  },
-};
-// Пиши код ниже этой строки
-const { today: { low: lowToday, high: highToday, icon: todayIcon
-    = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg' },
-    tomorrow: { low: lowTomorrow, high: highTomorrow, icon: tomorrowIcon
-    = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg' }
-    } = forecast;
+    // Пиши код ниже этой строки
+function calculateMeanTemperature(forecast) {
+//   const todayLow = forecast.today.low;
+//   const todayHigh = forecast.today.high;
+//   const tomorrowLow = forecast.tomorrow.low;
+//   const tomorrowHigh = forecast.tomorrow.high;
+  const {today: {low: todayLow, high: todayHigh}, tomorrow: {low: tomorrowLow, high: tomorrowHigh}} = forecast;
+  // Пиши код выше этой строки
+  return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+}
