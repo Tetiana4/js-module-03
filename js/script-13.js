@@ -11,6 +11,6 @@ const values = [];
 // Пиши код ниже этой строки
 
 const keys = Object.keys(apartment);
-for (let key of Object.keys(apartment)) {
+for (let key of keys) {
   values.push(apartment[key]);
 }
